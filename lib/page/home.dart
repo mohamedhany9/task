@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   startProvider() async{
 
     final doctorprovider = Provider.of<DoctorServiceApi>(context,listen: false);
-    await doctorprovider.getDoctordata(token);
+     doctorprovider.getDoctordata(token);
   }
   @override
   void initState() {
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: heaght,
         width: width,
-        child: doctorprovider.apiData == null ? CircularProgressIndicator():ListView.builder(
+        child: doctorprovider.apiData == null ? const Center(child: CircularProgressIndicator()):ListView.builder(
             itemCount: doctorprovider.apiData!.count,
             itemBuilder: (context,index){
           return Text(doctorprovider.apiData!.results[index].doctor.user.name);

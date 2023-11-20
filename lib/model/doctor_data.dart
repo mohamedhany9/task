@@ -45,7 +45,7 @@ class Result {
   dynamic document;
   DateTime date;
   dynamic orderSummary;
-  int serviceAmount;
+  dynamic serviceAmount;
   bool isCouponApplied;
   bool isVip;
   bool isRated;
@@ -126,7 +126,7 @@ class Doctor {
   String detail;
   String educationalJourney;
   int totalPatientsCured;
-  int totalEarnings;
+  dynamic totalEarnings;
   Department department;
   List<Slot> slot;
 
